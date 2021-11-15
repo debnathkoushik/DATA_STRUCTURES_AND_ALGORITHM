@@ -95,23 +95,23 @@ class BinaryTree
 	}
 
 
-	Node treeSearch(Node node, int value)
+	Node treeSearch(Node node, int key)
 	{
 		Node starting_node = node;
 
-		if (starting_node  == null || value == starting_node .key)
+		if (starting_node  == null || key == starting_node .key)
 		{
 			return starting_node ;
 		}
 
-		if (value < starting_node.key )
+		if (key < starting_node.key )
 		{
-			return treeSearch(starting_node.left, value);
+			return treeSearch(starting_node.left, key);
 		}
 
 		else
 		{
-			return treeSearch(starting_node.right, value);
+			return treeSearch(starting_node.right, key);
 		}
 		
 	}
